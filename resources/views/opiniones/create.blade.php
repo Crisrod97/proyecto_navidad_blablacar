@@ -12,9 +12,9 @@
             </ul>
         </div>
     @endif
-
+    <div id="encabezado">
 <h3>Registro de nueva opinión</h3>
-
+</div>
 <form action="{{route('opiniones.store')}}" method="post">
     @csrf
     <div class="form-group">

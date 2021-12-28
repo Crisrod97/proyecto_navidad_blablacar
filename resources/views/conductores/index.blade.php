@@ -34,13 +34,16 @@
     
 </head>
 <body>
+    <div id="encabezado">
+    
     <h1>Conductores</h1>
 
     @if(count($conductores)>0)
         <a href=" {{url('/')}}" class="btn btn-primary">Inicio</a>
         <a href=" {{url('/')}}" class="btn btn-primary">Volver</a>
         <a href=" {{url('/conductores/create')}}" class="btn btn-primary">Nuevo conductor</a><br><br>
-        {{--<a href="/imprimirpdf">Imprimir</a>--}}
+        <a href="/conductorespdf">Descargar Informe sobre los conductores</a>
+    </div>
         <table id="tabla_conductores" class="table table-striped table-bordered">
             <thead>
                 <tr>
@@ -71,11 +74,11 @@
                         <td>{{$conductor->modelo_coche}}</td>
                         <td class="text-center"><a href="{{url('/trayectos')}}/{{$conductor->id}}">{{$conductor->trayectos->count()}}</a></td>
                         <td class="text-center"><a href="{{url('/opiniones_conductor')}}/{{$conductor->id}}">{{$conductor->opiniones->count()}}</a></td>
-                        <td align="center"><a href="{{url('/conductores')}}/{{$conductor->id}}/edit"><img width="32px" src="https://img.icons8.com/cotton/2x/000000/edit.png"></a></td>
+                        <td align="center"><a href="{{url('/conductores')}}/{{$conductor->id}}/edit"><button type="button" class="btn btn-info">Editar</button></a></td>
                         <td align="center"><a href="#" class='btn btn-danger borrar'>Borrar</a></td>
                     </tr>
                 @endforeach
-                <a href="/conductorespdf">Descargar Informe sobre los conductores</a>
+                
             </tbody>
 
         </table>

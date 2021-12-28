@@ -19,11 +19,24 @@
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 12px;
-            border: 4px solid greenyellow;
             margin: 10px;
             padding: 40px;
-            border-radius: 20px
+            border-radius: 20px;
+            background-color: #FFC6B3;
         }
+        table {
+            background-color: #F5FEFF;        
+        }
+
+    #encabezado{
+        text-align:center;
+        background-color:white;
+        margin: 10px;
+        padding: 4px;
+        border-radius: 20px;
+        color:#FF865D
+    }
+     
     </style>
 <script>
     $(document).ready(function() {

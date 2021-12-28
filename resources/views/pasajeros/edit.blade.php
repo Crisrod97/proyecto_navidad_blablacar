@@ -13,8 +13,9 @@
         </div>
     @endif
 
+    <div id="encabezado">
 <h3>Editar pasajero</h3>
-
+    </div>
 <form action="{{url('/pasajeros/')}}/{{$pasajero->id}}" method="post">
     @csrf
     @method("PUT")

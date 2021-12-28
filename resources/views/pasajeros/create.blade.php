@@ -12,9 +12,11 @@
             </ul>
         </div>
     @endif
-<h1>Pasajero</h1>
-<h3>Registro de nuevo usuario</h3>
 
+    <div id="encabezado">
+    <h1>Pasajero</h1>
+<h3>Registro de nuevo usuario</h3>
+    </div>
 <form action="{{route('pasajeros.store')}}" method="post">
     @csrf
 

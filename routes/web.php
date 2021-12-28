@@ -32,3 +32,7 @@ Route::get('/conductorespdf', [ConductorController::class, 'imprimir']);
 Route::get('/pasajerospdf', [PasajeroController::class, 'imprimir']);
 
 Route::resource('/opiniones', OpinionController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

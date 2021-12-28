@@ -15,9 +15,9 @@
     </script>
 </head>
 <body>
-    
+<div id="encabezado">
     <h3>{{$conductor->nombre}}</h3>
-
+</div>
     @if(count($conductor->opiniones)>0)
         <a href=" {{url('/')}}" class="btn btn-primary">Inicio</a>
         <a href=" {{url('/conductores')}}" class="btn btn-primary">Volver</a>

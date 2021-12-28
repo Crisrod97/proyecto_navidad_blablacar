@@ -12,9 +12,9 @@
             </ul>
         </div>
     @endif
-
+<div id="encabezado">
 <h3>Editar conductor</h3>
-
+</div>
 <form action="{{url('/conductores/')}}/{{$conductor->id}}" method="post">
     @csrf
     @method("PUT")

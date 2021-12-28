@@ -12,8 +12,11 @@
             </ul>
         </div>
     @endif
-<h1>Conductor</h1>
+
+    <div id="encabezado">
+    <h1>Conductor</h1>
 <h3>Registro de nuevo usuario</h3>
+</div>
 
 <form action="{{route('conductores.store')}}" method="post">
     @csrf

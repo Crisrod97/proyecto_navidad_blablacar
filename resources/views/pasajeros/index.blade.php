@@ -16,13 +16,16 @@
     
 </head>
 <body>
+    <div id="encabezado">
     <h1>Pasajeros</h1>
 
     @if(count($pasajeros)>0)
         <a href=" {{url('/')}}" class="btn btn-primary">Inicio</a>
         <a href=" {{url('/')}}" class="btn btn-primary">Volver</a>
         <a href=" {{url('/pasajeros/create')}}" class="btn btn-primary">Nuevo pasajero</a><br><br>
-        {{--<a href="/imprimirpdf">Imprimir</a>--}}
+        <a href="/pasajerospdf">Descargar Informe sobre los pasajeros</a>
+
+        </div>
         <table id="tabla_pasajeros" class="table table-striped table-bordered">
             <thead>
                 <tr>
@@ -50,13 +53,11 @@
                         <td>{{$pasajero->email}}</td>
                         <td>{{$pasajero->dni}}</td>
                         <td>{{$pasajero->telefono}}</td>   
-                        {{--<td class="text-center"><a href="{{url('/vuelos_piloto')}}/{{$piloto->id}}">{{$pasajero->vuelos->count()}}</a></td>--}}
-                        <td align="center"><a href="{{url('/pasajeros')}}/{{$pasajero->id}}/edit"><img width="32px" src="https://img.icons8.com/cotton/2x/000000/edit.png"></a></td>
+                        <td align="center"><a href="{{url('/pasajeros')}}/{{$pasajero->id}}/edit"><button type="button" class="btn btn-info">Editar</button></a></td>
                         <td align="center"><a href="#" class='btn btn-danger borrar'>Borrar</a></td>
 
                     </tr>
                 @endforeach
-                <a href="/pasajerospdf">Descargar Informe sobre los pasajeros</a>
             </tbody>
 
         </table>
