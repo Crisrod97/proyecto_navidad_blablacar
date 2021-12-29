@@ -1,5 +1,7 @@
 @extends("layouts.app")
 
+@section("titulo")
+<title>PASAJEROS</title>
 
 
 @section("contenido")
@@ -54,7 +56,7 @@
                         <td>{{$pasajero->dni}}</td>
                         <td>{{$pasajero->telefono}}</td>   
                         <td align="center"><a href="{{url('/pasajeros')}}/{{$pasajero->id}}/edit"><button type="button" class="btn btn-info">Editar</button></a></td>
-                        <td align="center"><a href="#" class='btn btn-danger borrar'>Borrar</a></td>
+                        <td align="center"><a href="#" class='btn btn-danger borrar'>E-mail</a></td>
 
                     </tr>
                 @endforeach
