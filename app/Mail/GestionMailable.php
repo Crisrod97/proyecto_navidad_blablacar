@@ -11,7 +11,7 @@ class GestionMailable extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subject = "Gestión ShareCar"; //Asunto del mail
+    public $subject = "Contáctanos ShareCar"; //Asunto del mail
     /**
      * Create a new message instance.
      *

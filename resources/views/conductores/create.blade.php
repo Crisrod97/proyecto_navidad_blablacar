@@ -42,7 +42,7 @@
         <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono" value="{{old('telefono')}}">
     </div>
     <div class="form-group">
-        <label for="email">Correo Electrónico</label>
+        <label for="email">Contáctanos</label>
         <input type="text" class="form-control" id="email" name="email" placeholder="email" value="{{old('email')}}">
     </div>
     <button type="submit" class="btn btn-primary">Guardar</button>

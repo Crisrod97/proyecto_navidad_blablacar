@@ -16,6 +16,43 @@
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            $('#tabla_conductores').DataTable( {
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+                }
+            });
+
+            $(".borrar").click(function(){
+                const tr=$(this).closest("tr"); //guardamos el tr completo
+                const id=tr.data("id");
+                Swal.fire({
+                    title: '¿seguro que quieres borrarlo?',
+                    showCancelButton: true,
+                    confirmButtonText: 'Borrar',
+                    cancelButtonText: `Cancelar`,
+                }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            method: "POST",
+                            url   : "{{url('/pasajeros')}}/"+id,
+                            data  : {
+                                _token: "{{csrf_token()}}",
+                                _method: "delete",
+                            },
+                            success: function(){
+                                tr.fadeOut();
+                            }
+                        });
+                    } 
+                })
+            });
+
+        } );
+        </script>
+
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -25,57 +62,22 @@
             border-radius: 20px;
             background-color: #D1F1EC;
         }
+        
         table {
             background-color: #F5FEFF;        
         }
 
-    #encabezado{
-        text-align:center;
-        background-color:white;
-        margin: 10px;
-        padding: 4px;
-        border-radius: 20px;
-        color:#FF865D
-    }
+
+        #encabezado{
+            text-align:center;
+            background-color:white;
+            margin: 10px;
+            padding: 4px;
+            border-radius: 20px;
+            color:#FF865D;
+        }
      
     </style>
-<script>
-    $(document).ready(function() {
-        $('#tabla_conductores').DataTable( {
-            "language": {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
-            }
-        });
-
-        $(".borrar").click(function(){
-            const tr=$(this).closest("tr"); //guardamos el tr completo
-            const id=tr.data("id");
-            Swal.fire({
-                title: '¿seguro que quieres borrarlo?',
-                showCancelButton: true,
-                confirmButtonText: 'Borrar',
-                cancelButtonText: `Cancelar`,
-            }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-                if (result.isConfirmed) {
-                    $.ajax({
-                        method: "POST",
-                        url   : "{{url('/pasajeros')}}/"+id,
-                        data  : {
-                            _token: "{{csrf_token()}}",
-                            _method: "delete",
-                        },
-                        success: function(){
-                            tr.fadeOut();
-                        }
-                    });
-                } 
-            })
-        });
-
-    } );
-    </script>
-
 </head>
 <body>
 
@@ -90,7 +92,7 @@
             <a class="nav-link" href=" {{url('/opiniones/create')}}">Opinión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href=" {{url('/gestion')}}">E-Mail</a>
+            <a class="nav-link" href=" {{url('/gestion')}}">Contáctanos</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
