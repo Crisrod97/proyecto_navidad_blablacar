@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     @yield("titulo")
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -16,44 +15,8 @@
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('#tabla_conductores').DataTable( {
-                "language": {
-                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
-                }
-            });
-
-            $(".borrar").click(function(){
-                const tr=$(this).closest("tr"); //guardamos el tr completo
-                const id=tr.data("id");
-                Swal.fire({
-                    title: '¿seguro que quieres borrarlo?',
-                    showCancelButton: true,
-                    confirmButtonText: 'Borrar',
-                    cancelButtonText: `Cancelar`,
-                }).then((result) => {
-                /* Read more about isConfirmed, isDenied below */
-                    if (result.isConfirmed) {
-                        $.ajax({
-                            method: "POST",
-                            url   : "{{url('/pasajeros')}}/"+id,
-                            data  : {
-                                _token: "{{csrf_token()}}",
-                                _method: "delete",
-                            },
-                            success: function(){
-                                tr.fadeOut();
-                            }
-                        });
-                    } 
-                })
-            });
-
-        } );
-        </script>
-
-    <style>
+  
+  <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 12px;
@@ -82,7 +45,7 @@
 <body>
 
 <nav class="blockquote text-center navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">ShareCar</a>
+      <a class="navbar-brand" href="/">ShareCar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

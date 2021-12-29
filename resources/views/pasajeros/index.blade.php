@@ -1,23 +1,48 @@
 @extends("layouts.app")
 
 @section("titulo")
-<title>PASAJEROS</title>
+    <title>ShareCar - Pasajeros</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function() {
+                $('#tabla_pasajeros').DataTable( {
+                    "language": {
+                        "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+                    }
+                });
+
+                $(".borrar").click(function(){
+                    const tr=$(this).closest("tr"); //guardamos el tr completo
+                    const id=tr.data("id");
+                    Swal.fire({
+                        title: '¿seguro que quieres borrarlo?',
+                        showCancelButton: true,
+                        confirmButtonText: 'Borrar',
+                        cancelButtonText: `Cancelar`,
+                    }).then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            $.ajax({
+                                method: "POST",
+                                url   : "{{url('/conductores')}}/"+id,
+                                data  : {
+                                    _token: "{{csrf_token()}}",
+                                    _method: "delete",
+                                },
+                                success: function(){
+                                    tr.fadeOut();
+                                }
+                            });
+                        } 
+                    })
+                });
+            } );
+    </script>
+@endsection
 
 @section("contenido")
 
-<script>
-    $(document).ready(function() {
-        $('#tabla_pasajeros').DataTable( {
-            "language": {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
-            }
-        });
-    } );
-    </script>
-    
-</head>
-<body>
     <div id="encabezado">
     <h1>Pasajeros</h1>
 

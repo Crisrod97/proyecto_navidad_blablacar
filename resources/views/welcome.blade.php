@@ -2,7 +2,6 @@
 
 @section("titulo")
 <title>INICIO</title>
-
 @section("contenido")
 
     <div class="p-4 blockquote text-center">
