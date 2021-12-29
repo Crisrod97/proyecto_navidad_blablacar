@@ -7,6 +7,8 @@ use App\Http\Controllers\Pasajero;
 use App\Http\Controllers\PasajeroController;
 use App\Http\Controllers\Opinion;
 use App\Http\Controllers\OpinionController;
+use App\Mail\GestionMailable;
+use Illuminate\Support\Facades\Mails;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +38,9 @@ Route::resource('/opiniones', OpinionController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/gestion', function () {
+    $correo = new GestionMailable;
+    Mail::to('cristinitaa15@gmail.com')->send($correo);
+    return view('welcome');
+});
