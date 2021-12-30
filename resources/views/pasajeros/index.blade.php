@@ -37,6 +37,15 @@
                         } 
                     })
                 });
+                $(".informe").click(function(){
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Informe en descarga',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                });
             } );
     </script>
 @endsection
@@ -47,7 +56,7 @@
     <h1>Pasajeros</h1>
 
     @if(count($pasajeros)>0)
-        <a href="/pasajerospdf" class="btn btn-outline-success">Descargar Informe</a><br><br>
+        <a href="/pasajerospdf" class="btn btn-outline-success informe">Descargar Informe</a><br><br>
         <a href="/pasajerospdf"></a>
 
         </div>
@@ -101,8 +110,6 @@
 
         </table>
     @else
-        <h1>No hay usuarios</h1>
+        <h1>No hay registros para pasajeros</h1>
     @endif
-
-
 @endsection

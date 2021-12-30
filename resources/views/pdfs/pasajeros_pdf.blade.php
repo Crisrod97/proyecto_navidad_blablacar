@@ -1,20 +1,8 @@
-@extends("layouts.app")
-
-
+@extends("layouts.pdf")
 
 @section("contenido")
-<style>
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-size: 10px;
-            border: 0px solid greenyellow;
-            margin: 5px;
-            padding: 4px;
-            border-radius: 5px
-        }
-    </style>   
-</head>
-<body>
+    <img src="https://static.vecteezy.com/system/resources/previews/003/223/621/non_2x/carsharing-service-line-icon-with-car-vector.jpg" class="rounded mx-auto d-block" alt="Responsive image" height="100px" weight="100px">
+    <h6>ShareCar</h6>
     <h1>Listado de pasajeros</h1>
 
     @if(count($pasajeros)>0)
@@ -31,7 +19,7 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach($pasajeros as $pasajero)
+                @foreach($pasajeros as $pasajero)
                     <tr data-id='{{$pasajero->id}}'>
                         <td>{{$pasajero->id}}</td>
                         <td>{{$pasajero->nombre}}</td>
@@ -40,17 +28,12 @@
                         <td>{{$pasajero->email}}</td>
                         <td>{{$pasajero->dni}}</td>
                         <td>{{$pasajero->telefono}}</td>
-
-                        {{--<td class="text-center"><a href="{{url('/vuelos_piloto')}}/{{$piloto->id}}">{{$piloto->vuelos->count()}}</a></td>--}}
-
                     </tr>
                 @endforeach
             </tbody>
-
         </table>
     @else
-        <h1>No hay pasajeros</h1>
+        <h1>No existen registros para pasajeros</h1>
     @endif
-
 
 @endsection
