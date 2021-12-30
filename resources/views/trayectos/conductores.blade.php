@@ -52,7 +52,7 @@
 
         </table>
     @else
-        <h1>No hay registros para este conductor</h1>
+        <h5>Este conductor no ha realizado trayectos aún</h5>
     @endif
 
 

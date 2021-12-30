@@ -41,6 +41,10 @@
         <label for="telefono">Telefono</label>
         <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono" value="{{old('telefono')}}">
     </div>
+    <div class="form-group">
+        <label for="modelo_coche">Modelo de vehículo</label>
+        <input type="text" class="form-control" id="modelo_coche" name="modelo_coche" placeholder="Modelo de vehículo" value="{{old('modelo_coche')}}">
+    </div>
     <label for="">Correo electrónico</label>
     <div class="form-row align-items-center"> 
     <div class="col-auto">

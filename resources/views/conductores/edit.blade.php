@@ -39,6 +39,10 @@
         <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono" value="{{$conductor->telefono}}">
     </div>
     <div class="form-group">
+        <label for="modelo_coche">Modelo de vehículo</label>
+        <input type="text" class="form-control" id="modelo_coche" name="modelo_coche" placeholder="Modelo de vehículo" value="{{$conductor->modelo_coche}}">
+    </div>
+    <div class="form-group">
         <label for="email">Correo Electrónico</label>
         <input type="text" class="form-control" id="email" name="email" placeholder="email" value="{{$conductor->email}}">
     </div>
