@@ -17,8 +17,7 @@
     @endif
 
     <div id="encabezado">
-        <h1>Conductor</h1>
-        <h3>Registro de nuevo usuario</h3>
+        <h1>Registro de nuevo conductor</h1>
     </div>
 
     <form action="{{route('conductores.store')}}" method="post">

@@ -16,6 +16,20 @@
       <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
       <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function() {
+              $(".correo").click(function(){
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Correo de contacto enviado',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                });
+            } );
+    </script>
 
     <style>
           body {
@@ -52,7 +66,7 @@
                 <a class="nav-link" href=" {{url('/opiniones/create')}}">Opinión</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=" {{url('/gestion')}}">Contáctanos</a>
+                <a class="nav-link correo" href=" {{url('/gestion')}}">Contáctanos</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Conductores</a>

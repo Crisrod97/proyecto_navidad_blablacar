@@ -17,8 +17,8 @@
     @endif
 
     <div id="encabezado">
-        <h1>Pasajero</h1>
-        <h3>Registro de nuevo usuario</h3>
+    <h1>Registro de nuevo pasajero</h1>
+
     </div>
     <form action="{{route('pasajeros.store')}}" method="post">
         @csrf

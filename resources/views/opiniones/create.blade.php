@@ -16,7 +16,7 @@
         </div>
     @endif
     <div id="encabezado">
-        <h3>Registro de nueva opinión</h3>
+        <h1>Registro de nueva opinión</h1>
     </div>
     <form action="{{route('opiniones.store')}}" method="post">
         @csrf
