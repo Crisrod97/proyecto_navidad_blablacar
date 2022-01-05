@@ -10,4 +10,14 @@ class Trayecto extends Model
     use HasFactory;
     public $timestamps = false;
 
+    public function pasajeros()
+    {
+        return $this->belongsTo(Pasajero::class);
+    }
+
+    public function conductores()
+    {
+        return $this->belongsTo(Conductor::class);
+    }
+
 }
