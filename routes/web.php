@@ -39,8 +39,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/gestion', function () {
-    $correo = new GestionMailable;
-    Mail::to('elpinzoncanario@gmail.com')->send($correo);
-    return view('welcome');
-});
+
+Route::get('contactanos', [ContactanosController::class, 'index'])->name('contactanos.index');

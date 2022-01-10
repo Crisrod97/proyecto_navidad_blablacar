@@ -66,7 +66,7 @@
                 <a class="nav-link" href=" {{url('/opiniones/create')}}">Opinión</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link correo" href=" {{url('/gestion')}}">Contáctanos</a>
+                <a class="nav-link correo" href="{{route('contactanos.index')}}">Contáctanos</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Conductores</a>
