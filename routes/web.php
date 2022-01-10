@@ -41,6 +41,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/gestion', function () {
     $correo = new GestionMailable;
-    Mail::to('cristinitaa15@gmail.com')->send($correo);
+    Mail::to('elpinzoncanario@gmail.com')->send($correo);
     return view('welcome');
 });
