@@ -12,21 +12,13 @@ class GestionMailable extends Mailable
     use Queueable, SerializesModels;
 
     public $subject = "Contáctanos ShareCar"; //Asunto del mail
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public $contacto;
+
+    public function __construct($contacto)
     {
-        //
+        $this->contacto = $contacto;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
     public function build()
     {
         return $this->view('emails.gestion');

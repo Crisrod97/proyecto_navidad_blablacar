@@ -20,23 +20,23 @@
     <h1>Formulario de contacto</h1>
 
     </div>
-    <form action="{{route('pasajeros.store')}}" method="post">
+    <form action="{{route('contactanos.store')}}" method="post">
         @csrf
         <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre" value="{{old('nombre')}}">
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="{{old('nombre')}}">
         </div>
         <div class="form-group">
             <label for="apellidos">Apellidos</label>
-            <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="apellidos" value="{{old('apellidos')}}">
+            <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos" value="{{old('apellidos')}}">
         </div>
         <div class="form-group">
             <label for="email">Correo Electrónico</label>
-            <input type="text" class="form-control" id="email" name="email" placeholder="email" value="{{old('email')}}">
+            <input type="text" class="form-control" id="email" name="email" placeholder="Correo Electrónico" value="{{old('email')}}">
         </div>
         <div class="form-group">
             <label for="mensaje">Mensaje</label>
-            <textarea type="text" class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="mensaje" value="{{old('mensaje')}}"></textarea>
+            <textarea type="text" class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Contenido del mensaje" value="{{old('mensaje')}}"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-check" viewBox="0 0 16 16">
@@ -51,4 +51,17 @@
             </svg>
         </a>
     </form>
+    @if (session('info'))         
+       
+        <script>
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Correo de contacto enviado',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+    </script>     
+    @endif
+
 @endsection

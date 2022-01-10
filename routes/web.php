@@ -9,6 +9,8 @@ use App\Http\Controllers\Opinion;
 use App\Http\Controllers\OpinionController;
 use App\Mail\GestionMailable;
 use Illuminate\Support\Facades\Mails;
+use App\Http\Controllers\Contactanos;
+use App\Http\Controllers\ContactanosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,5 +41,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
 Route::get('contactanos', [ContactanosController::class, 'index'])->name('contactanos.index');
+
+Route::post('contactanos', [ContactanosController::class, 'store'])->name('contactanos.store');
