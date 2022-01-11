@@ -71,7 +71,6 @@
                     <th data-orderable="false">EMAIL</th>
                     <th data-orderable="false">DNI</th>
                     <th data-orderable="false">TELEFONO</th>
-                    
                     <th></th>
                     <th></th>
                 </tr>
