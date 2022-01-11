@@ -17,19 +17,6 @@
       <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-            $(document).ready(function() {
-              $(".correo").click(function(){
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Correo de contacto enviado',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                });
-            } );
-    </script>
 
     <style>
           body {
@@ -39,6 +26,11 @@
               padding: 0px;
               border-radius: 20px;
               background-color: #D1F1EC;
+          }
+
+          #principal{
+            padding: 30px;
+            margin: 30px;
           }
 
           table {
