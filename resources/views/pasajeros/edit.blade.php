@@ -23,6 +23,13 @@
     <form action="{{url('/pasajeros/')}}/{{$pasajero->id}}" method="post">
         @csrf
         @method("PUT")
+        
+        <div class="form-group">
+          <fieldset disabled="">
+            <label class="form-label" for="disabledInput">Identificador</label>
+            <input class="form-control" id="id" type="text" placeholder="identificador" value="{{$pasajero->id}}" disabled="">
+          </fieldset>
+        </div>
         <div class="form-group">
             <label for="nombre">Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre" value="{{$pasajero->nombre}}">

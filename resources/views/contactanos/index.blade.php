@@ -51,17 +51,17 @@
             </svg>
         </a>
     </form>
+    
     @if (session('info'))         
-       
         <script>
-                    Swal.fire({
-                        position: 'center',
-                        icon: 'success',
-                        title: 'Correo de contacto enviado',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-    </script>     
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Correo de contacto enviado',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        </script>     
     @endif
 
 @endsection
