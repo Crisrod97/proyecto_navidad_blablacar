@@ -3,7 +3,6 @@
 @section("titulo")
     <title>ShareCar - Pasajeros</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
             $(document).ready(function() {
                 $('#tabla_pasajeros').DataTable( {
@@ -37,15 +36,6 @@
                         } 
                     })
                 });
-                $(".informe").click(function(){
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Informe en descarga',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                });
             } );
     </script>
 @endsection
@@ -57,8 +47,6 @@
 
     @if(count($pasajeros)>0)
         <a href="/pasajerospdf" class="btn btn-outline-success informe">Descargar Informe</a><br><br>
-        <a href="/pasajerospdf"></a>
-
         </div>
         <table id="tabla_pasajeros" class="table table-striped table-bordered">
             <thead>

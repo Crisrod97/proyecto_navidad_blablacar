@@ -36,15 +36,6 @@
                         } 
                     })
                 });
-                $(".informe").click(function(){
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Informe en descarga',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                });
             } );
     </script>
 @endsection

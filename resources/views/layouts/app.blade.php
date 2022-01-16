@@ -15,6 +15,19 @@
       <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
       <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+          $(".informe").click(function(){
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Informe en descarga',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            });
+        } );
+    </script>
   <style>
           body {
               font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
