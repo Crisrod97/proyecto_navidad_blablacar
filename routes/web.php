@@ -2,14 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConductorController;
-use App\Http\Controllers\Conductor;
-use App\Http\Controllers\Pasajero;
 use App\Http\Controllers\PasajeroController;
-use App\Http\Controllers\Opinion;
 use App\Http\Controllers\OpinionController;
 use App\Mail\GestionMailable;
 use Illuminate\Support\Facades\Mails;
-use App\Http\Controllers\Contactanos;
 use App\Http\Controllers\ContactanosController;
 
 /*

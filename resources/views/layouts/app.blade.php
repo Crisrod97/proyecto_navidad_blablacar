@@ -30,12 +30,24 @@
     </script>
   <style>
           body {
-              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-              font-size: 12px;
               margin: 0px;
               padding: 0px;
               border-radius: 20px;
-              background-color: #D1F1EC;
+              background-image: url("https://images.unsplash.com/photo-1490032451070-c427f59f18b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+              background-size: 100%;
+          }
+          .form-group{
+            width:auto;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+          }
+
+          #formulario{
+              width:50%;
+              margin:auto;
+              background-color: rgb(255, 255, 255, 0.5);
+              border-radius: 10px;
           }
 
           #principal{
@@ -44,15 +56,21 @@
           }
 
           table {
-              background-color: #F5FEFF;        
+              background-color: #F5FEFF;     
+              border: 10px solid;   
           }
 
-          #encabezado{
+          th{
+            background-color: #159EAE;
+        }
+
+
+        #encabezado{
               text-align:center;
               margin: 10px;
               padding: 4px;
               border-radius: 20px;
-              color:#FF865D;
+              color: black;
           }
       </style>
   </head>
@@ -60,7 +78,7 @@
 
    @yield("titulo")        
 
-    <nav class="blockquote text-center navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="blockquote text-center navbar navbar-expand-lg navbar-dark bg-info">
           <a class="navbar-brand" href="/">ShareCar</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

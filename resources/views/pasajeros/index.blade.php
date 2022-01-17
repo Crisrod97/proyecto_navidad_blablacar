@@ -46,7 +46,7 @@
     <h1>Pasajeros</h1>
 
     @if(count($pasajeros)>0)
-        <a href="/pasajerospdf" class="btn btn-outline-success informe">Descargar Informe</a><br><br>
+        <a href="/pasajerospdf" class="btn btn-info">Descargar Informe</a><br><br>
         </div>
         <table id="tabla_pasajeros" class="table table-striped table-bordered">
             <thead>

@@ -46,7 +46,7 @@
         <h1>Conductores</h1>
 
         @if(count($conductores)>0)
-        <a href="/conductorespdf" class="btn btn-outline-success informe">Descargar Informe</a><br><br>
+        <a href="/conductorespdf" class="btn btn-info">Descargar Informe</a><br><br>
     </div>
 
         <table id="tabla_conductores" class="table table-striped table-bordered">
