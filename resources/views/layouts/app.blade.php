@@ -107,6 +107,10 @@
               </li>
             </ul>
           </div>
+          <form action="{{route ('logout') }}" method="post">
+                    @csrf
+                    <button class="btn btn-info bottom-center">Desconectarse</button>
+                </form>
         </nav>
         <div id="principal">
             @yield("contenido")

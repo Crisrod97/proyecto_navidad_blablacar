@@ -7,6 +7,7 @@ use App\Http\Controllers\OpinionController;
 use App\Mail\GestionMailable;
 use Illuminate\Support\Facades\Mails;
 use App\Http\Controllers\ContactanosController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('contactanos', [ContactanosController::class, 'index'])->name('contactanos.index');
 
 Route::post('contactanos', [ContactanosController::class, 'store'])->name('contactanos.store');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Ruta para login
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
