@@ -56,6 +56,9 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
+                                    <a href="{{ url('/') }}" class="nav-link">ShareCar</a>
+                                </li>    
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
                                 </li>
                             @endif
