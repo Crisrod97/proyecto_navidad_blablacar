@@ -13,14 +13,10 @@
         <div class="relative flex items-top justify-center">
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                         <a href="{{route('conductores.index')}}"class="btn btn-info">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
-                                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-                            </svg>
+                            <i class="bi bi-caret-left-fill"></i>
                         Conductores</a>
                         <a href="{{route('pasajeros.index')}}" class="btn btn-info">Pasajeros
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                            </svg>
+                            <i class="bi bi-caret-right-fill"></i>
                         </a>
                 </div>
             </div>
