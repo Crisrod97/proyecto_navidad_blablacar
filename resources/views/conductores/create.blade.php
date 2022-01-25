@@ -49,22 +49,10 @@
         </div>
        
         <label class="form-group">Correo electrónico</label>
-        <div class="form-row align-items-center"> 
-        <div class="col-auto mb-5">
-          <label class="sr-only" for="inlineFormInput">ejemplo</label>
-          <input type="text" class="form-control" id="inlineFormInput" placeholder="ejemplo">
+        <div class="form-group align-items-center"> 
+            <input type="text" class="form-control" id="email" name="email" placeholder="email" placeholder="ejemplo@ejemplo.com">
         </div>
-        
-        <div class="col-auto mb-5">
-          <label class="sr-only" for="inlineFormInputGroup">ejemplo.com</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <div class="input-group-text">@</div>
-            </div>
-            <input type="text" class="form-control" id="email" name="email" placeholder="ejemplo.com">
-          </div>
-        </div>
-        
+
         <button type="submit" class="btn btn-primary mb-5">
             <i class="bi bi-send-check-fill"></i>
         </button>

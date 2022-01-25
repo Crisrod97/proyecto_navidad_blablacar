@@ -63,7 +63,7 @@
         <div class="form-group">
             <label for="email">Correo Electrónico</label>
             <input type="text" class="form-control" id="email" name="email" placeholder="email" value="{{$conductor->email}}">
-            </div>
+        </div>
         <button type="submit" class="btn btn-primary mb-5">
             <i class="bi bi-send-check-fill"></i>
         </button>

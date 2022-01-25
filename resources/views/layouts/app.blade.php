@@ -36,6 +36,9 @@
               border-radius: 20px;
               background-image: url("https://images.unsplash.com/photo-1490032451070-c427f59f18b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
               background-size: 100%;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-attachment: fixed; 
           }
           .form-group{
             width:auto;
